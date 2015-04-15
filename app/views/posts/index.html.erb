@@ -1,0 +1,12 @@
+<h1>FaceCrook</h1>
+<% @posts.each do |post| %>
+<ul>
+    <li>
+        <strong><%= post.content %></strong>
+        <strong><%= image_tag post.picture.url if post.picture? %></strong>
+    </li>
+</ul>
+<% end %>
+
+
+<%= link_to "Add new post", posts_new_path %>

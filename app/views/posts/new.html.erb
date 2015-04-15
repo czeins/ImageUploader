@@ -1,0 +1,17 @@
+<h1>Post to BoogFace</h1>
+
+<%= form_for(@post, html: {multipart: true}) do |f| %>
+
+<div class="field">
+    <%= f.text_area :content, placeholder: "Compose new post..." %>
+    <span><br />
+        <%= f.file_field :picture %>
+    </span>
+    <br />
+    <%= f.submit "Post" %>
+<br>
+<%= link_to "Back home", root_path %>
+
+</div>
+
+<% end %>
